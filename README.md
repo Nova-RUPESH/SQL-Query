@@ -28,4 +28,55 @@ VALUES
 INSERT INTO Employee (emp_id, emp_name, job_title, salary, dept_id)<br>
 VALUES
 (101, 'Ram Sharma', 'Manager', 50000, 1),<br>
-(102, 'Sita Karki', 'Developer', 60000, 2);<br>
+(102, 'Sita Karki', 'Developer', 60000, 2);<br><br>
+
+
+--Using Join Statement<br><br>
+SELECT e.emp_name, d.dept_name, e.salary<br>
+FROM Employee e<br>
+INNER JOIN Department d<br>
+ON e.dept_id = d.dept_id<br>
+WHERE e.salary > 50000;<br><br>
+
+--Updating Statement<br><br>
+UPDATE Employee<br>
+SET salary = salary + 5000<br>
+WHERE dept_id = 2;<br><br>
+
+--Deletion Statement<br><br>
+DELETE FROM Employee<br>
+WHERE emp_id = 101;<br><br>
+
+
+DELETE FROM Employee<br>
+WHERE emp_name LIKE 'R%';<br><br>
+
+--Display Statement<br><br>
+SELECT *<br>
+FROM Department<br>
+WHERE dept_name = 'IT';<br><br>
+
+--To delete table completely<br><br>
+DROP TABLE Employee;<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
